@@ -181,6 +181,7 @@ export default function CartPage(params) {
                         </Button>
                       </td>
                       <td>
+                        {/* Fix the price. Doesn't work plus items.  */}
                         $
                         {cartProducts.filter((id) => id === product._id)
                           .length * product.price}
