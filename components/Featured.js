@@ -95,9 +95,10 @@ export default function Featured({ product }) {
 
           <Column>
             <img
-              src={'https://obidniak-next-ecommerce.s3.amazonaws.com/1691740583831.png'}
+              src={'https://obidniak-next-ecommerce.s3.amazonaws.com/1694584190401.png'}
               alt="phone "
-              style={mainPhoto}
+              // style={mainPhoto}
+              style={{background: 'none'}}
             />
           </Column>
         </ColumnsWrapper>

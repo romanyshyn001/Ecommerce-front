@@ -30,7 +30,6 @@ export default async function handler(req, res) {
       (p) => p._id.toString() === productId
     );
     const quantity = productsIds.filter((id) => id === productId)?.length || 0;
-    const priceToPay = quantity * productInfo.price * 100;
     if (quantity > 0 && productInfo) {
       line_items.push({
         quantity,
