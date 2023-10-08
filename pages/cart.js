@@ -50,8 +50,8 @@ const ProductImageBox = styled.div`
     }
   }
 `;
-
-const ProductInfoCell = styled.div`
+//here
+const ProductInfoCell = styled.td`
   padding: 10px 0;
 `;
 
@@ -149,6 +149,8 @@ export default function CartPage(params) {
             {!cartProducts.length && <div>Your cart is empty</div>}
             {products?.length > 0 && (
               <Table>
+
+             
                 <thead>
                   <tr>
                     <th>Product</th>
@@ -158,12 +160,13 @@ export default function CartPage(params) {
                 </thead>
                 <tbody>
                   {products.map((product) => (
+                    
                     <tr key={product._id}>
                       <ProductInfoCell>
                         <ProductImageBox>
                           <img src={product.images[0]} alt="product" />
                         </ProductImageBox>
-                        <td>{product.title}</td>
+                        <div>{product.title}</div>
                       </ProductInfoCell>
                       <td>
                         <Button onClick={() => lessOfThisProduct(product._id)}>
@@ -188,13 +191,14 @@ export default function CartPage(params) {
                       </td>
                     </tr>
                   ))}
+                  
                   <tr>
                     <td></td>
                     <td></td>
                     <td>${total}</td>
                   </tr>
                 </tbody>
-              </Table>
+               </Table>
             )}
           </Box>
 
